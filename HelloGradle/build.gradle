@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+// 네이버로 예를 들면 com.naver임
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+// 모듈들을 적음 적으면 알아서 다운로드 해줌
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
